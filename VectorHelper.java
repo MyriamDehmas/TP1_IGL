@@ -40,4 +40,48 @@ public int [] doubleArray(int [] vector)
 
         }
 //---------------------------------
+    // Added by Lina
+
+        public void Somme (int vect1 [], int vect2 [] , int result[]) throws DifferenceException
+        {
+
+                int i=0;
+                if (vect1.length != vect2.length ) throw new DifferenceException() ;
+                else
+                {
+                        while (i < vect1.length)
+                        {
+                                result[i] = vect1[i] + vect2[i];
+                                i++;
+                        }
+                }
+        }
+
+//________________________________________________________________________
+
+        public void Tri (int vect1 [] )
+        {
+                boolean verif = false;
+                int sauve;
+
+                while (verif == false)
+                {
+                        verif = true;
+                        for (int i=0 ;i< (vect1.length -1); i++)
+                        {
+
+                                if ( vect1[i] > vect1[i+1] )
+                                {
+                                        sauve = vect1[i];
+                                        vect1[i] = vect1[i + 1];
+                                        vect1[i + 1] = sauve;
+                                        verif = false;
+
+                                }
+
+                        }
+
+                }
+
+        }
         }
