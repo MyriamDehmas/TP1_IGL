@@ -77,27 +77,33 @@ public class Main {
 
                 case 2:
 
-                    System.out.println(" Enter th length of the array 1 :"); tai = sc.NextInt();
-                    array = new int[tai];
+                    System.out.println(" Enter th length of the array 1 :"); tai = sc.nextInt();
+                    array = new int[tai];   int [] result2= new int [tai];
                     for (int i=0; i<tai; i++)
 
                     {
                         System.out.println(" array[" + i + "]");
-                        array[i] = sc.NextInt();
+                        array[i] = sc.nextInt();
                     }
 
-                    System.out.println(" Enter th length of the array 2 :"); tai = sc.NextInt();
-                    array2 = new int[tai];
+                    System.out.println(" Enter th length of the array 2 :"); tai = sc.nextInt();
+                    int [] array2 = new int[tai];
                     for (int i=0; i<tai; i++)
 
                     {
                         System.out.println(" array2[" + i + "]");
-                        array2[i] = sc.NextInt();
+                        array2[i] = sc.nextInt();
                     }
-                   int result [tai]= vectHelp.Somme(array , array2);
+                    try {
 
+                        vectHelp.Somme(array, array2, result2);
+                    }
+                    catch (DifferenceException ex)
+                    {
+                        System.out.println(ex.getMessage());
+                    }
                     System.out.println(" Here is the array result :");
-                    ArraysInOut.printArray(result);
+                    ArraysInOut.printArray(result2);
 
                     System.out.println(" The result : ");
                     ArraysInOut.printArray(array);
