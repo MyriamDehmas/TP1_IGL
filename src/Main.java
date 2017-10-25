@@ -34,6 +34,7 @@ public class Main {
                     vectHelp.Tri(array);
                     System.out.println(" The result : ");
                     ArraysInOut.printArray(array);
+                    System.out.println("------------------------------------------------" );
 
 
                     break;
