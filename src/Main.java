@@ -57,6 +57,7 @@ public class Main {
                     ArraysInOut.readArray(tai, array);
                     int[] result = vectHelp.minMax(array);
                     System.out.println(" Min Value : " + result[0] + " Max Value :" + result[1]);
+                    System.out.println("------------------------------------------------" );
 
 
                     break;
@@ -68,6 +69,7 @@ public class Main {
                     ArraysInOut.readArray(tai, array);
                     int[] result1 = vectHelp.doubleArray(array);
                     ArraysInOut.printArray(array);
+                    System.out.println("------------------------------------------------" );
 
 
                     break;
