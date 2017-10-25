@@ -10,7 +10,7 @@ public class Main {
     public static void main( String args[])
     {
         Scanner sc=new Scanner (System.in);  int rep=0, tai;
-        int [] array; int yes = 1;
+        int [] array;
         VectorHelper vectHelp = new VectorHelper ();
 
         System.out.println("------------  Available operations  ------------" );
@@ -23,7 +23,7 @@ public class Main {
         System.out.println("------------------------------------------------" );
 
         System.out.println(" Enter the operation number :" );  rep=sc.nextInt();
-        while( yes) {
+
             switch (rep) {
                 case 1:
                     System.out.println(" 1-  Sort the elements of an array ");
@@ -76,6 +76,6 @@ public class Main {
         }
 
 
-    }
+
 
 }
