@@ -94,11 +94,8 @@ public class Main {
                         array2[i] = sc.NextInt();
                     }
                    int result [tai]= vectHelp.Somme(array , array2);
-                    System.out.println(" Here is the array result :");
-                    for (int i=0; i<tai ; i++)
-                    {
-                        System.out.println(" array[" +i +"] =" + result[i]);
-                    }
+                    ystem.out.println(" The result : ");
+                    ArraysInOut.printArray(array);
 
                     break;
 
