@@ -7,22 +7,25 @@ public class Main {
 
 
 
-    public static void main( String args[])
-    {
-        Scanner sc=new Scanner (System.in);  int rep=0, tai;
-        int [] array;
-        VectorHelper vectHelp = new VectorHelper ();
+    public static void main( String args[]) {
+        Scanner sc = new Scanner(System.in);
+        int rep = 0, tai;
+        int[] array;
+        int yes = 1;
+        VectorHelper vectHelp = new VectorHelper();
 
-        System.out.println("------------  Available operations  ------------" );
+        System.out.println("------------  Available operations  ------------");
         System.out.println();
         System.out.println(" 1-  Sort the elements of an array ");
         System.out.println(" 2-  Sum two arrays ");
         System.out.println(" 3-  Reverse an array ");
         System.out.println(" 4-  Get the Min and Max values of an array ");
         System.out.println(" 5-  Double the elements' value of an array ");
-        System.out.println("------------------------------------------------" );
-
-        System.out.println(" Enter the operation number :" );  rep=sc.nextInt();
+        System.out.println("------------------------------------------------");
+        while (yes==1)
+        {
+        System.out.println(" Enter the operation number :");
+        rep = sc.nextInt();
 
             switch (rep) {
                 case 1:
@@ -34,8 +37,9 @@ public class Main {
                     vectHelp.Tri(array);
                     System.out.println(" The result : ");
                     ArraysInOut.printArray(array);
-                    System.out.println("------------------------------------------------" );
-
+                    System.out.println("------------------------------------------------");
+                    System.out.println("Do another operation ? (1 for yes 0 for no)");
+                    yes = sc.nextInt();
 
                     break;
                 case 3:
@@ -47,6 +51,9 @@ public class Main {
                     vectHelp.reverse(array);
                     System.out.println("The result : ");
                     ArraysInOut.printArray(array);
+                    System.out.println("------------------------------------------------");
+                    System.out.println("Do another operation ? (1 for yes 0 for no)");
+                    yes = sc.nextInt();
 
                     break;
                 case 4:
@@ -57,7 +64,9 @@ public class Main {
                     ArraysInOut.readArray(tai, array);
                     int[] result = vectHelp.minMax(array);
                     System.out.println(" Min Value : " + result[0] + " Max Value :" + result[1]);
-                    System.out.println("------------------------------------------------" );
+                    System.out.println("------------------------------------------------");
+                    System.out.println("Do another operation ? (1 for yes 0 for no)");
+                    yes = sc.nextInt();
 
 
                     break;
@@ -69,28 +78,31 @@ public class Main {
                     ArraysInOut.readArray(tai, array);
                     int[] result1 = vectHelp.doubleArray(array);
                     ArraysInOut.printArray(array);
-                    System.out.println("------------------------------------------------" );
+                    System.out.println("------------------------------------------------");
+                    System.out.println("Do another operation ? (1 for yes 0 for no)");
+                    yes = sc.nextInt();
 
 
                     break;
 
 
-
-
                 case 2:
 
-                    System.out.println(" Enter th length of the array 1 :"); tai = sc.nextInt();
-                    array = new int[tai];   int [] result2= new int [tai];
-                    for (int i=0; i<tai; i++)
+                    System.out.println(" Enter th length of the array 1 :");
+                    tai = sc.nextInt();
+                    array = new int[tai];
+                    int[] result2 = new int[tai];
+                    for (int i = 0; i < tai; i++)
 
                     {
                         System.out.println(" array[" + i + "]");
                         array[i] = sc.nextInt();
                     }
 
-                    System.out.println(" Enter th length of the array 2 :"); tai = sc.nextInt();
-                    int [] array2 = new int[tai];
-                    for (int i=0; i<tai; i++)
+                    System.out.println(" Enter th length of the array 2 :");
+                    tai = sc.nextInt();
+                    int[] array2 = new int[tai];
+                    for (int i = 0; i < tai; i++)
 
                     {
                         System.out.println(" array2[" + i + "]");
@@ -99,9 +111,7 @@ public class Main {
                     try {
 
                         vectHelp.Somme(array, array2, result2);
-                    }
-                    catch (DifferenceException ex)
-                    {
+                    } catch (DifferenceException ex) {
                         System.out.println(ex.getMessage());
                     }
                     System.out.println(" Here is the array result :");
@@ -109,6 +119,9 @@ public class Main {
 
                     System.out.println(" The result : ");
                     ArraysInOut.printArray(array);
+                    System.out.println("------------------------------------------------");
+                    System.out.println("Do another operation ? (1 for yes 0 for no)");
+                    yes = sc.nextInt();
 
 
                     break;
@@ -116,6 +129,7 @@ public class Main {
 
             }
         }
+    }
 
 
 

@@ -19,7 +19,7 @@ import java.util.Arrays;
     public void reverseTest() throws Exception {
 
         int [] enteryVect = { 1,2,3,4,5,6};
-        int [] expectedResult = { 1,5,4,3,2,1};
+        int [] expectedResult = { 6,5,4,3,2,1};
         int [] effectiveResult= vh.reverse(enteryVect);
         if ( !Arrays.equals(expectedResult,effectiveResult) )     { fail("inverse method doesn't work");}
 

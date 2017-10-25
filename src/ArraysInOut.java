@@ -26,6 +26,6 @@ public class ArraysInOut {
         for (int i=0; i<array.length;i++)
         {   System.out.print(array[i]+"  ");
         }
-        System.out.print("");
+        System.out.println();
     }
 }
